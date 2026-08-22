@@ -1,0 +1,3 @@
+# PREVIEW — liberar quando CRP e dados estiverem confirmados
+User-agent: *
+Disallow: /
