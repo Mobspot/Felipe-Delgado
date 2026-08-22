@@ -27,7 +27,7 @@ h2{ font-size:clamp(1.875rem,1.1rem + 3.4vw,3.125rem); }
 h3{ font-size:clamp(1.375rem,1.05rem + 1.4vw,1.875rem); font-weight:500; }
 p{ margin:0; text-wrap:pretty; }
 ul{ margin:0; padding:0; list-style:none; }
-img{ max-width:100%; display:block; }
+img{ max-width:100%; height:auto; display:block; }
 a{ color:var(--brand); text-decoration:none; }
 a:hover{ color:var(--brand-deep); }
 :focus-visible{ outline:2px solid var(--brand); outline-offset:3px; border-radius:4px; }
@@ -100,7 +100,7 @@ header{ position:relative; z-index:50; flex:none; }
 .hero>.wrap{ flex:1; display:flex; align-items:flex-end; padding-block:32px 44px; }
 @media (min-width:1024px){ .hero>.wrap{ align-items:center; padding-block:40px 56px; } }
 .hero>picture{ position:absolute; inset:0; }
-.hero>picture img{ width:100%; height:100%; object-fit:cover; object-position:46% center; }
+.hero>picture img{ width:100%; height:100%!important; object-fit:cover; object-position:46% center; }
 @media (min-width:1024px){ .hero>picture img{ object-position:60% center; } }
 .veil{ position:absolute; inset:0;
   background:linear-gradient(180deg,rgba(22,18,15,.46) 0%,rgba(22,18,15,.32) 30%,rgba(22,18,15,.76) 66%,rgba(22,18,15,.94) 100%); }
@@ -164,7 +164,7 @@ header{ position:relative; z-index:50; flex:none; }
 .band{ position:relative; display:grid; place-items:center; text-align:center;
   padding-block:64px; overflow:hidden; background:#2A231D; }
 @media (min-width:1024px){ .band{ padding-block:110px; } }
-.band>img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.band>img{ position:absolute; inset:0; width:100%; height:100%!important; object-fit:cover; }
 .band .veil2{ position:absolute; inset:0; background:rgba(22,18,15,.66); }
 .band .wrap{ position:relative; display:grid; gap:18px; justify-items:center; }
 .rule{ width:40px; height:1px; background:var(--gold); }
@@ -216,7 +216,7 @@ textarea{ min-height:110px; resize:vertical; }
 .final{ position:relative; display:grid; place-items:center; text-align:center;
   padding-block:80px; overflow:hidden; background:#241C16; }
 @media (min-width:1024px){ .final{ padding-block:128px; } }
-.final>img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.final>img{ position:absolute; inset:0; width:100%; height:100%!important; object-fit:cover; }
 .final .veil2{ position:absolute; inset:0; background:rgba(22,18,15,.82); }
 .final .wrap{ position:relative; display:grid; gap:18px; justify-items:center; max-width:660px; }
 .final h2{ color:#FBF8F4; }
@@ -262,7 +262,7 @@ footer .mark{ color:#E8EDE9; font-size:34px; }
 .band-hero{ position:relative; display:flex; flex-direction:column;
   min-height:240px; overflow:hidden; background:#2E251E; }
 @media (min-width:1024px){ .band-hero{ min-height:360px; } }
-.band-hero>img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+.band-hero>img{ position:absolute; inset:0; width:100%; height:100%!important; object-fit:cover; opacity:.5; }
 .band-hero .veil{ position:absolute; inset:0;
   background:linear-gradient(90deg,rgba(22,18,15,.94) 0%,rgba(22,18,15,.86) 50%,rgba(22,18,15,.68) 100%); }
 .band-hero>.wrap{ position:relative; flex:1; display:flex; align-items:center; padding-block:28px 32px; }
