@@ -89,7 +89,7 @@ a:hover{ color:var(--brand-deep); }
 .arrow:hover svg{ transform:translateX(4px); }
 
 /* ---------- header ---------- */
-header{ position:absolute; inset:0 0 auto; z-index:50; }
+header{ position:relative; z-index:50; flex:none; }
 .nav{ display:flex; align-items:center; justify-content:space-between; height:84px; }
 .mark{ font-family:"Sacramento",cursive; font-size:26px; line-height:1.15; color:#FBF8F4;
   white-space:nowrap; flex:none; }
@@ -119,16 +119,19 @@ header{ position:absolute; inset:0 0 auto; z-index:50; }
 .close{ width:44px; height:44px; border:1px solid var(--line); border-radius:12px; background:transparent; font-size:22px; color:var(--ink); cursor:pointer; }
 
 /* ---------- hero ---------- */
-.hero{ position:relative; min-height:92svh; display:flex; align-items:flex-end;
-  padding-bottom:44px; overflow:hidden; background:#2E251E; }
-@media (min-width:1024px){ .hero{ min-height:88vh; align-items:center; padding-bottom:0; } }
+.hero{ position:relative; min-height:92svh; display:flex; flex-direction:column;
+  overflow:hidden; background:#2E251E; }
+@media (min-width:1024px){ .hero{ min-height:88vh; } }
+/* o conteudo ocupa a altura restante e se centraliza dentro dela */
+.hero>.wrap{ flex:1; display:flex; align-items:flex-end; padding-block:32px 44px; }
+@media (min-width:1024px){ .hero>.wrap{ align-items:center; padding-block:40px 56px; } }
 .hero>img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 22%; }
 @media (min-width:1024px){ .hero>img{ object-position:60% center; } }
 .veil{ position:absolute; inset:0;
   background:linear-gradient(180deg,rgba(22,18,15,.46) 0%,rgba(22,18,15,.32) 30%,rgba(22,18,15,.76) 66%,rgba(22,18,15,.94) 100%); }
 @media (min-width:1024px){ .veil{
   background:linear-gradient(90deg,rgba(22,18,15,.93) 0%,rgba(22,18,15,.82) 36%,rgba(22,18,15,.46) 68%,rgba(22,18,15,.28) 100%); } }
-.hero .wrap{ position:relative; width:100%; }
+.hero>.wrap{ position:relative; width:100%; }
 .hero-in{ display:flex; flex-direction:column; gap:20px; max-width:660px; }
 @media (min-width:1024px){ .hero-in{ gap:26px; } }
 .hero h1{ color:#FBF8F4; }
@@ -257,6 +260,11 @@ footer .mark{ color:#E8EDE9; font-size:34px; }
 .emerg{ font-size:.875rem; line-height:1.65; color:rgba(232,237,233,.72); text-align:center; max-width:860px; margin-inline:auto; }
 .emerg strong{ color:#E8EDE9; }
 .copy{ font-size:.8125rem; color:rgba(232,237,233,.5); text-align:center; margin-top:22px; }
+.credit{ font-size:.8125rem; color:rgba(232,237,233,.55); text-align:center; margin-top:6px; }
+.credit a{ display:inline; min-height:0; color:rgba(232,237,233,.82);
+  text-decoration:underline; text-underline-offset:3px;
+  text-decoration-thickness:1px; text-decoration-color:rgba(232,237,233,.32); }
+.credit a:hover{ color:#fff; text-decoration-color:rgba(232,237,233,.75); }
 
 /* ---------- FAB ---------- */
 #fab{ position:fixed; right:20px; bottom:calc(20px + env(safe-area-inset-bottom)); z-index:90;
@@ -609,6 +617,7 @@ footer .mark{ color:#E8EDE9; font-size:34px; }
 
     <div class="fdiv"></div>
     <p class="copy">© 2026 Felipe Delgado · CRP 06/109184</p>
+    <p class="credit">Desenvolvido por <a href="https://mobspot.com.br/?utm_source=felipe-delgado&amp;utm_medium=selo-rodape&amp;utm_campaign=rede-clientes" target="_blank" rel="noopener">Mobspot</a></p>
   </div>
 </footer>
 
