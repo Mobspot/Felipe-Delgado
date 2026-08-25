@@ -318,6 +318,41 @@ footer .mark{ color:#E8EDE9; font-size:34px; }
 .tec p{ font-size:.9375rem; }
 .tec .pratica{ font-size:.875rem; font-style:italic; color:var(--ink-mute); }
 
+/* ---------- formação ---------- */
+.formacao{ display:grid; gap:16px; }
+@media (min-width:768px){ .formacao{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; } }
+.formacao li{ background:var(--surface); border:1px solid var(--line);
+  border-top:3px solid var(--brand); border-radius:var(--r-lg);
+  padding:22px 24px; display:grid; gap:14px; align-content:start; }
+@media (min-width:768px){ .formacao li{ padding:26px 28px; } }
+.formacao .area{ font-family:var(--serif); font-size:1.3125rem; line-height:1.25; color:var(--ink);
+  display:flex; flex-wrap:wrap; align-items:baseline; gap:9px; }
+.formacao .area em{ font-style:normal; font-size:.6875rem; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; color:#8A6A32; font-family:var(--sans);
+  border:1px solid var(--gold); border-radius:var(--r-full); padding:2px 9px; }
+.formacao li.wide{ grid-column:1/-1; }
+.formacao .linhas{ display:grid; gap:12px; }
+@media (min-width:768px){ .formacao .linhas.duas{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px 32px; } }
+.formacao .linhas p{ display:grid; gap:2px; align-content:start; }
+.formacao .grau{ font-size:.6875rem; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--brand); }
+.formacao .inst{ font-size:.9375rem; line-height:1.5; color:var(--ink-soft); }
+.formacao .obs-area{ font-size:.875rem; font-style:italic; color:var(--ink-mute); line-height:1.55; }
+
+.registro{ display:flex; flex-wrap:wrap; align-items:center; gap:16px 24px;
+  padding:22px 24px; border-radius:var(--r-md);
+  background:var(--accent-wash); border-left:3px solid var(--accent); }
+@media (min-width:768px){ .registro{ padding:24px 28px; } }
+.registro>svg{ color:var(--accent); flex:none; }
+.registro .dados{ display:grid; gap:3px; }
+.registro .k{ font-size:.6875rem; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--ink-mute); }
+.registro .v{ font-family:var(--serif); font-size:1.4375rem; line-height:1.2; color:var(--ink);
+  font-variant-numeric:tabular-nums; }
+.registro .obs{ flex:1 1 260px; font-size:.875rem; line-height:1.55; color:var(--ink-soft); }
+.registro .obs a{ color:var(--accent); text-decoration:underline;
+  text-underline-offset:3px; text-decoration-thickness:1px; }
+
 /* esperar / não é */
 .esperar li{ display:flex; gap:12px; line-height:1.6; padding-block:7px; }
 .esperar li::before{ content:""; width:6px; height:6px; border-radius:99px;
