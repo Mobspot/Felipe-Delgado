@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mobspot.github.io/Felipe-Delgado/sitemap.xml
+Sitemap: https://felipedelgadopsicologo.com.br/sitemap.xml
